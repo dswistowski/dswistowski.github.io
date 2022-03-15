@@ -1,0 +1,216 @@
+---
+import Layout from "../layouts/Layout.astro";
+import yaml from "../../../config.yaml";
+import type { Asset, Config } from "../config";
+import kaeiog from "../assets/kaeiog.pdf";
+import ListRow from "../components/ListRow.astro";
+import Timeline from "../components/Timeline.astro";
+import TimelineElement from "../components/TimelineElement.astro";
+import Paragraphs from "../components/Paragraphs.astro";
+import SmallPoints from "../components/SmallPoints.astro";
+import Section from "../components/Section.astro";
+import List from "../components/List.astro";
+import Accent from "../components/Accent.astro";
+import Button from "../components/Button.astro";
+import Arrow from "../components/Arrow.astro";
+import GithubIcon from "../components/GithubIcon.astro";
+import LinkedInIcon from "../components/LinkedInIcon.astro";
+import cvPdf from "../../../latex/cv.pdf";
+import PDFIcon from "../components/PDFIcon.astro";
+import IconLink from "../components/IconLink.astro";
+
+const assets: Record<Asset, string> = {
+  kaeiog,
+};
+
+const config = yaml as Config;
+---
+
+<Layout title={`${config.name} CV`}>
+  <header
+    class="dark:backdrop-brightness-75 backdrop-brightness-105 shadow pt-8"
+  >
+    <div class="max-w-4xl m-auto py-4 px-8">
+      <div class="flex gap-2 justify-end">
+        <IconLink href={config.github}>
+          <GithubIcon />
+        </IconLink>
+        <IconLink href={config.linkedin}>
+          <LinkedInIcon />
+        </IconLink>
+        <IconLink href={cvPdf}>
+          <PDFIcon />
+        </IconLink>
+      </div>
+
+      <h1
+        class="font-extrabold md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-tr dark:from-purple-400 dark:to-purple-600 from-purple-600 to-purple-900"
+      >
+        {config.name}
+      </h1>
+
+      <Section title="personal information">
+        <List>
+          <ListRow title="Email address">
+            <a href={`mailto:${config.email}`}>{config.email}</a>
+          </ListRow>
+
+          <ListRow title="Phone number">
+            <a href={`tel:${config.phone}`}>{config.phone}</a>
+          </ListRow>
+        </List>
+      </Section>
+    </div>
+  </header>
+  <div class="m-auto py-4 px-8 max-w-4xl">
+    <div
+      class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+    >
+      <svg
+        class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+        viewBox="0 0 1155 678"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
+          fill-opacity=".3"
+          d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+        ></path>
+        <defs>
+          <linearGradient
+            id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
+            x1="1155.49"
+            x2="-78.208"
+            y1=".177"
+            y2="474.645"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#9089FC"></stop>
+            <stop offset="1" stop-color="#FF80B5"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <Section>
+      {
+        config.about_me.map((paragraph) => (
+          <p class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
+            {paragraph}
+          </p>
+        ))
+      }
+    </Section>
+
+    <Section title="work experience">
+      <Timeline>
+        {
+          config.work.map((work) => (
+            <TimelineElement date={work.date} subtitle={work.city}>
+              <Fragment slot="title">
+                {work.title} at <Accent>{work.where}</Accent>
+              </Fragment>
+              <Paragraphs paragraphs={work.description} />
+              <SmallPoints points={work.stack} />
+            </TimelineElement>
+          ))
+        }
+      </Timeline>
+    </Section>
+
+    <Section title="education">
+      <Timeline>
+        {
+          config.education.map((education) => (
+            <TimelineElement date={education.date}>
+              <Fragment slot="title">
+                {education.place} at <Accent>{education.city}</Accent>
+              </Fragment>
+              <h4>{education.city}</h4>
+              <Paragraphs
+                paragraphs={[education.faculty, `Thesis: ${education.thesis}`]}
+              />
+            </TimelineElement>
+          ))
+        }
+      </Timeline>
+    </Section>
+
+    <Section title="publications">
+      <Timeline>
+        {
+          config.publications.map((publication) => (
+            <TimelineElement date={publication.date}>
+              <Fragment slot="title">
+                <a href={assets[publication.asset]} target="_blank">
+                  {publication.title}
+                </a>
+                <Accent>{publication.journal}</Accent>
+              </Fragment>
+              <Paragraphs paragraphs={[publication.abstract]} />
+            </TimelineElement>
+          ))
+        }
+      </Timeline>
+    </Section>
+
+    <Section title="talks">
+      <Timeline>
+        {
+          config.talks.map((talk) => (
+            <>
+              <TimelineElement date={talk.date}>
+                <Fragment slot="title">
+                  {talk.title}&nbsp;<Accent>{talk.where}</Accent>
+                </Fragment>
+                <div class="flex gap-2">
+                  <Button href={talk.presentation}>
+                    Slides <Arrow />
+                  </Button>
+                  <Button href={talk.url}>
+                    Video <Arrow />
+                  </Button>
+                </div>
+              </TimelineElement>
+            </>
+          ))
+        }
+      </Timeline>
+    </Section>
+
+    <Section title="interests">
+      <SmallPoints points={config.interests} />
+    </Section>
+
+    <div
+      class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+    >
+      <svg
+        class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+        viewBox="0 0 1155 678"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)"
+          fill-opacity=".3"
+          d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+        ></path>
+        <defs>
+          <linearGradient
+            id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
+            x1="1155.49"
+            x2="-78.208"
+            y1=".177"
+            y2="474.645"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#9089FC"></stop>
+            <stop offset="1" stop-color="#FF80B5"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</Layout>

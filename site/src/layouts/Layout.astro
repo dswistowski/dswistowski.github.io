@@ -1,0 +1,44 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body class="font-body">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;700;900&family=Cormorant+Garamond:wght@300;500;700&display=swap");
+  body {
+    @apply dark:bg-slate-900 dark:text-white dark:text-gray-500;
+  }
+
+  h2 {
+    @apply uppercase tracking-widest font-medium py-2;
+  }
+
+  a {
+    @apply hover:underline;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply text-purple-800 dark:text-purple-400 font-heading;
+  }
+  h1 {
+    @apply uppercase text-4xl tracking-widest;
+  }
+</style>

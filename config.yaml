@@ -1,0 +1,251 @@
+---
+name: Damian Świstowski
+email: damian@swistowski.org
+phone: "+44 7402 64 28 69"
+github: https://github.com/dswistowski/cv
+linkedin: https://www.linkedin.com/in/dswistowski/
+
+about_me:
+  - >
+    I am software developer with 10+ years of experience in the industry. I
+    have worked on a wide range of projects, from small web applications to
+    large enterprise systems. I am a polyglot programmer, but I have a
+    particular interest in python, typescript and distributed systems.
+  - >
+    I am a strong believer in a lean and agile approach to software. For me software development is 
+    solving problems, not just writing the code. I am a strong advocate of the XP values and principles.
+  - >
+    SOLID and DRY are my main architectural principles. There is no silver bullet, but 
+    continuous integration, continuous delivery allows to increase both throughput and quality.
+work:
+  - date: "2022-Present"
+    title: "Staff Engineer"
+    where: "Babylon Health"
+    city: "London"
+    description:
+      - >
+        Design and build 3rd generation of Babylon conversation platform (async messaging)
+      - >
+        Design GraphQL API for north traffic
+      - >
+        Design Rest API for west-east traffic
+      - >
+        Create Conversation Platform Test Runner, a tool for defining requirements and tests in Domain Specific Language. 
+        COpTeR provides abstraction to have stable acceptance tests for whole product, with fraction less integration with Babylon testing infrastructure
+
+    stack:
+      - python
+      - fastapi
+      - k8s
+      - elasticsearch
+      - kafka
+      - react native
+      - typescript
+
+  - date: "2020-2022"
+    title: "Engineering Manager"
+    where: "Babylon Health"
+    city: "London"
+    description:
+      - >
+        Manage 3-6 direct reports, depending on the team size
+      - >
+        Work closely with stakeholders and product managers to define roadmap and priorities
+      - >
+        Replace 1st generation of the Babylon conversation platform with 2nd generation without a big bang
+      - >
+        Make sure SSDLC is followed and that the team is following best practices
+      - >
+        Put pressure on the business to make sure my team have enough time to not cumulate too much technical debt
+      - >
+        Put pressure on the team to make sure what they deliver is aligned with the client's needs
+      - >
+        Do pairing sessions with team members to make sure knowledge is shared
+      - >
+        Build state storage format for conversation state to with delta layers allowing undo peration. The state is strongly typed and schema changes were handled automatically and in a safe manner
+
+    stack:
+      - python
+      - flask
+      - k8s
+      - postgres
+      - redis
+      - kafka
+
+  - date: "2019-2000"
+    title: "Senior Software Engineer"
+    where: "Babylon Health"
+    city: "London"
+    description:
+      - >
+        Part of the design team which created the migration plan from 1st generation of the Babylon conversation platform (monolith) to 2nd generation (microservices)
+      - >
+        Create various CLI tools used by the team and other teams to make integration with the Conversation Platform easier
+
+    stack:
+      - python
+      - flask
+      - k8s
+      - postgresql
+      - redis
+      - kafka
+
+  - date: "2019"
+    title: "Senior Software Engineer"
+    where: "B2C2"
+    city: London
+    description:
+      - >
+        Created the Trade History collecting system
+      - >
+        REST API crawler was created as cloud task, raw data
+        were processed with a set of stateless procedures
+
+    stack:
+      - python
+      - aws
+      - lambda
+      - sqs
+      - elasticache
+
+  - date: "2017-2019"
+    title: "Senior Python Developer"
+    where: "Springer Nature"
+    city: London
+    description:
+      - >
+        Build and iterate internal CI/CD system and tooling
+      - >
+        Migrate legacy code to python 3
+      - >
+        Define build pipelines used by other teams with an easy definition of build steps
+      - >
+        Develop tooling for Cloud Foundry deployments
+
+    stack:
+      - python
+      - OpenStack
+      - celery
+
+  - date: "2015-2017"
+    title: "Senior Engineer"
+    where: "Shortlist"
+    city: San Francisco (remote)
+    description:
+      - >
+        Developing the backend for the workforce management platform project
+      - >
+        Cooperate with frontend engineers to define usable REST API
+      - >
+        Design and implement a data model for the system
+
+    stack:
+      - python
+      - django
+      - postgresql
+      - django rest framework
+      - javascript
+      - angular
+
+  - date: "2012-2015"
+    title: "Senior Python Developer"
+    where: "ZedMedia"
+    city: Globally (remote)
+    description:
+      - >
+        Maintain a Django-based application
+      - >
+        Implement a scoring algorithm for articles to be present in a different part of the service
+      - >
+        Extend and maintain database models
+      - >
+        Create tools for easy A/B tests
+
+    stack:
+      - python
+      - django
+      - postgresql
+      - javascript
+      - perl
+
+  - date: "2010-2012"
+    title: "Senior Python Developer"
+    where: "Intelligent Elite"
+    city: Barcelona
+    description:
+      - >
+        Create an A/B testing suite with detailed statistics about user behaviour
+      - >
+        Improve the mailing system
+
+    stack:
+      - python
+      - django
+      - postgresql
+      - solr
+      - mongodb
+
+  - date: "2008-2010"
+    title: "Python Developer"
+    where: "OMS"
+    city: Bielsko-Biała, Poland
+    description:
+      - >
+        Design and implement a production management system
+      - >
+        Managing a team of 4 junior engineers
+
+    stack:
+      - python
+      - django
+      - mysql
+
+  - date: "2007-2008"
+    title: "PHP Junior developer"
+    where: "Gery Design"
+    city: Wrocław, Poland
+    description:
+      - >
+        Migrate old PHP projects to the Django framework
+      - >
+        Maintenance and optimization of existing projects
+
+    stack:
+      - php
+      - javascript
+      - python
+      - django
+      -
+education:
+  - place: The University of Silesia
+    city: Katowice
+    faculty: Computer Science and Materials Science
+    date: 2005 - 2007
+    what: Master of Computer Science
+    thesis: Particle Swarm Optimization in funding function minimum
+  - place: The University of Silesia
+    city: Katowice
+    faculty: Computer Science and Materials Science
+    date: 2002 - 2005
+    what: Bachelor of Computer Science
+    thesis: Developing an electronic repository for undergraduate theses
+
+publications:
+  - title: "Comparative Study: ACO and EC for TSP"
+    date: 2006
+    journal: kaeiog
+    abstract: The paper concentrates on the Traveling Salesman Problem solved by evolutionary and ACO algorithms
+    asset: kaeiog
+
+talks:
+  - where: PyCon UK
+    title: c?attrs how use it with rest microservices
+    presentation: https://debonair-mitten.surge.sh/
+    url: https://www.youtube.com/watch?v=jkq-p6H85Rs
+    date: 2019
+
+interests:
+  - Hiking
+  - Social dancing
+  - Cooking
+  - Video Games

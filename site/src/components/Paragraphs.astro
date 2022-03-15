@@ -1,0 +1,11 @@
+---
+interface Props {
+  paragraphs: string[];
+}
+
+const { paragraphs } = Astro.props;
+---
+
+<div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+  {paragraphs.map((paragraph) => <p class="mb-1">{paragraph}</p>)}
+</div>
