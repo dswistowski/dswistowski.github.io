@@ -11,4 +11,4 @@ latex/cv.pdf:  latex/cv.tex
 latex: latex/cv.pdf
 
 site:
-	cd site && pnpm build
+	pnpm build
