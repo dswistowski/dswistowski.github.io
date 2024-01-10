@@ -18,7 +18,23 @@ about_me:
     SOLID and DRY are my main architectural principles. There is no silver bullet, but 
     continuous integration, continuous delivery allows to increase both throughput and quality.
 work:
-  - date: "2022-Present"
+  - date: "2023-Present"
+    title: "Software Engineer"
+    where: "Genie AI"
+    city: "London"
+    description:
+      - Work on backend services, improve testability.
+
+    stack:
+      - python
+      - fastapi
+      - k8s
+      - elasticsearch
+      - postgresql
+      - react
+      - typescript        
+
+  - date: "2022-2023"
     title: "Staff Engineer"
     where: "Babylon Health"
     city: "London"
