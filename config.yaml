@@ -23,7 +23,13 @@ work:
     where: "Genie AI"
     city: "London"
     description:
-      - Work on backend services, improve testability.
+      - >
+        Work on backend services, improve testability. 
+      - >
+        Implementing integrations with various exchanges
+      - >
+        Extending portfolio of calculated asset metrics, make sure they are calculated
+        in effiecient way
 
     stack:
       - python
