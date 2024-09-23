@@ -2,7 +2,7 @@
 *.log
 latex/cv.aux
 latex/cv.out
-latex/cv.pdf
+latex/*.pdf
 .python-version
 __pycache__
 .DS_Store
