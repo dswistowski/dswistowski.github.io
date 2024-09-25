@@ -9,7 +9,7 @@ const { points } = Astro.props;
 <ul class="flex flex-wrap gap-1">
   {
     points.map((point) => (
-      <li class="text-sm font-semibold text-gray-900 dark:text-white after:content-['•'] last:after:content-none">
+      <li class="text-lg font-semibold text-gray-900 dark:text-white after:content-['•'] last:after:content-none">
         {point}
       </li>
     ))
