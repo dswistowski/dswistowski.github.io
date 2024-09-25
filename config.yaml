@@ -12,29 +12,30 @@ about_me:
     large enterprise systems. I am a polyglot programmer, but I have a
     particular interest in python, typescript and distributed systems.
 work:
-  - date: "2023-Present"
+  - date: "Oct 2023-Oct 2024"
     title: "Software Engineer"
     where: "Genie AI"
     city: "Remote"
     description:
       - >
-        Work on backend services, improve testability.
+        Developed backend services with a focus on enhancing testability.
       - >
-        Automate content delivery pipeline, automate building dependencies
+        Automated continuous delivery pipeline and streamlined building dependencies process.
       - >
-        Implementing integrations with various exchanges and blockchains (Deribit, OKX, Solana)
+        Integrated with multiple exchanges and blockchains including Deribit, OKX and Solana.
       - >
-        Extending portfolio of calculated asset metrics, make sure they are calculated
-        in efficient way
+        Expanded asset metric portfolio ensuring efficient calculation methods.
 
     stack:
       - python
       - fastapi
-      - k8s
-      - elasticsearch
+      - kubernetes
+      - terraform
       - postgresql
+      - typescript
       - react
-      - typescript        
+      - graphql
+      - rest api
 
   - date: "2022-2023"
     title: "Staff Engineer"
@@ -42,23 +43,24 @@ work:
     city: "London"
     description:
       - >
-        Design and build 3rd generation of Babylon conversation platform (async messaging)
+        Designed and constructed the 3rd generation of the Babylon conversation platform for asynchronous messaging.
       - >
-        Design GraphQL API for north traffic
+        Developed GraphQL API for northbound traffic and Rest API for east-west traffic.
       - >
-        Design Rest API for west-east traffic
-      - >
-        Create Conversation Platform Test Runner, a tool for defining requirements and tests in Domain Specific Language. 
-        COpTeR provides abstraction to have stable acceptance tests for whole product, with fraction less integration with Babylon testing infrastructure
+        Create Conversation Platform Test Runner, a tool for defining requirements and tests in Domain Specific
+        Language. COPteR provides an abstraction to have stable acceptance tests for the whole product, with
+        fraction-less integration with Babylon testing infrastructure.
 
     stack:
       - python
       - fastapi
-      - k8s
+      - kubernetes
       - elasticsearch
       - kafka
-      - react native
       - typescript
+      - react native
+      - graphql
+      - rest api
 
   - date: "2020-2022"
     title: "Engineering Manager"
@@ -66,29 +68,30 @@ work:
     city: "London"
     description:
       - >
-        Manage 3-6 direct reports, depending on the team size
+        Managed 3-6 direct reports, adapting to team size.
       - >
-        Work closely with stakeholders and product managers to define roadmap and priorities
+        Collaborated with stakeholders and product managers to define roadmap and priorities.
       - >
-        Replace 1st generation of the Babylon conversation platform with 2nd generation without a big bang
+        Successfully replaced 1st generation Babylon conversation platform with 2nd generation seamlessly.
       - >
-        Make sure SSDLC is followed and that the team is following best practices
+        Ensured strict compliance with SSDLC and best practices within the team.
       - >
-        Put pressure on the business to make sure my team have enough time to not cumulate too much technical debt
+        Advocated for a balanced workload to prevent technical debt accumulation.
       - >
-        Put pressure on the team to make sure what they deliver is aligned with the client's needs
+        Aligned team deliverables with client requirements through rigorous oversight.
       - >
-        Do pairing sessions with team members to make sure knowledge is shared
-      - >
-        Build state storage format for conversation state to with delta layers allowing undo peration. The state is strongly typed and schema changes were handled automatically and in a safe manner
+        Conducted knowledge-sharing pairing sessions with team members.
 
     stack:
       - python
       - flask
-      - k8s
+      - kubernetes
+      - terraform
       - postgres
       - redis
       - kafka
+      - typescript
+      - rest api
 
   - date: "2019-2000"
     title: "Senior Software Engineer"
@@ -96,17 +99,19 @@ work:
     city: "London"
     description:
       - >
-        Part of the design team which created the migration plan from 1st generation of the Babylon conversation platform (monolith) to 2nd generation (microservices)
+        Designed migration plan from 1st generation monolith to 2nd generation microservices for Babylon conversation platform
       - >
-        Create various CLI tools used by the team and other teams to make integration with the Conversation Platform easier
+        Developed CLI tools to facilitate integration with the Conversation Platform for internal and external teams.
 
     stack:
       - python
       - flask
-      - k8s
+      - kubernetes
+      - terraform
       - postgresql
       - redis
       - kafka
+      - rest api
 
   - date: "2019"
     title: "Senior Software Engineer"
@@ -116,8 +121,10 @@ work:
       - >
         Created the Trade History collecting system
       - >
-        REST API crawler was created as cloud task, raw data
-        were processed with a set of stateless procedures
+        Implemented REST API crawler as cloud task and processed raw data using stateless procedures
+      - >
+        Integrated with multiple exchange APIs
+        
 
     stack:
       - python
@@ -132,17 +139,18 @@ work:
     city: London
     description:
       - >
-        Build and iterate internal CI/CD system and tooling
+        Built and improved internal CI/CD system and tools
       - >
-        Migrate legacy code to python 3
+        Managed migration of legacy code to Python3
       - >
-        Define build pipelines used by other teams with an easy definition of build steps
+         Defined build pipelines for other teams with simplified build steps
       - >
-        Develop tooling for Cloud Foundry deployments
+        Created tooling for Cloud Foundry deployments
 
     stack:
       - python
       - OpenStack
+      - CloudFoundry
       - celery
 
   - date: "2015-2017"
@@ -151,11 +159,11 @@ work:
     city: San Francisco (remote)
     description:
       - >
-        Developing the backend for the workforce management platform project
+        Developed backend for the workforce management platform project.
       - >
-        Cooperate with frontend engineers to define usable REST API
+        Collaborated with frontend engineers to create a functional REST API.
       - >
-        Design and implement a data model for the system
+        Designed and implemented a data model for the system.
 
     stack:
       - python
@@ -164,6 +172,7 @@ work:
       - django rest framework
       - javascript
       - angular
+      - rest api
 
   - date: "2012-2015"
     title: "Senior Python Developer"
@@ -171,13 +180,13 @@ work:
     city: Globally (remote)
     description:
       - >
-        Maintain a Django-based application
+        Maintained a Django-based applications.
       - >
-        Implement a scoring algorithm for articles to be present in a different part of the service
+        Implemented a scoring algorithm for articles to be displayed in a different section of the service.
       - >
-        Extend and maintain database models
+        Extended and maintained database models.
       - >
-        Create tools for easy A/B tests
+        Developed tools to facilitate A/B testing.
 
     stack:
       - python
@@ -192,9 +201,9 @@ work:
     city: Barcelona
     description:
       - >
-        Create an A/B testing suite with detailed statistics about user behaviour
+        Developed an A/B testing suite with in-depth user behavior statistics.
       - >
-        Improve the mailing system
+        Enhanced the mailing system.
 
     stack:
       - python

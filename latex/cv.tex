@@ -26,7 +26,8 @@
 \usepackage{hyperref} % Required for adding links	and customizing them
 \hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
 
-\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+\newlength{\datebox} % Set the width of the date box in each block
+\setlength{\datebox}{30mm}
 
 \newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 \vspace{0.5em}} % Add some white space after each new entry
@@ -74,86 +75,80 @@
 
 \noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
 
-\NewEntry{2023-Present}{Software Engineer}
+\NewEntry{Oct 2023-Oct 2024}{Software Engineer}
 
 
-\Description{\MarginText{Genie AI\\\textsc{Remote}}Work on backend services, improve testability.
+\Description{\MarginText{Genie AI\\\textsc{Remote}}Developed backend services with a focus on enhancing testability.
 }
 
-\Description{Automate content delivery pipeline, automate building dependencies
+\Description{Automated continuous delivery pipeline and streamlined building dependencies process.
 }
 
-\Description{Implementing integrations with various exchanges and blockchains (Deribit, OKX, Solana)
+\Description{Integrated with multiple exchanges and blockchains including Deribit, OKX and Solana.
 }
 
-\Description{Extending portfolio of calculated asset metrics, make sure they are calculated in efficient way
+\Description{Expanded asset metric portfolio ensuring efficient calculation methods.
 }
 
 
-\Description{python $\sbullet$ fastapi $\sbullet$ k8s $\sbullet$ elasticsearch $\sbullet$ postgresql $\sbullet$ react $\sbullet$ typescript}
+\Description{python $\sbullet$ fastapi $\sbullet$ kubernetes $\sbullet$ terraform $\sbullet$ postgresql $\sbullet$ typescript $\sbullet$ react $\sbullet$ graphql $\sbullet$ rest api}
 %------------------------------------------------
 
 \NewEntry{2022-2023}{Staff Engineer}
 
 
-\Description{\MarginText{Babylon Health\\\textsc{London}}Design and build 3rd generation of Babylon conversation platform (async messaging)
+\Description{\MarginText{Babylon Health\\\textsc{London}}Designed and constructed the 3rd generation of the Babylon conversation platform for asynchronous messaging.
 }
 
-\Description{Design GraphQL API for north traffic
+\Description{Developed GraphQL API for northbound traffic and Rest API for east-west traffic.
 }
 
-\Description{Design Rest API for west-east traffic
-}
-
-\Description{Create Conversation Platform Test Runner, a tool for defining requirements and tests in Domain Specific Language.  COpTeR provides abstraction to have stable acceptance tests for whole product, with fraction less integration with Babylon testing infrastructure
+\Description{Create Conversation Platform Test Runner, a tool for defining requirements and tests in Domain Specific Language. COPteR provides an abstraction to have stable acceptance tests for the whole product, with fraction-less integration with Babylon testing infrastructure.
 }
 
 
-\Description{python $\sbullet$ fastapi $\sbullet$ k8s $\sbullet$ elasticsearch $\sbullet$ kafka $\sbullet$ react native $\sbullet$ typescript}
+\Description{python $\sbullet$ fastapi $\sbullet$ kubernetes $\sbullet$ elasticsearch $\sbullet$ kafka $\sbullet$ typescript $\sbullet$ react native $\sbullet$ graphql $\sbullet$ rest api}
 %------------------------------------------------
 
 \NewEntry{2020-2022}{Engineering Manager}
 
 
-\Description{\MarginText{Babylon Health\\\textsc{London}}Manage 3-6 direct reports, depending on the team size
+\Description{\MarginText{Babylon Health\\\textsc{London}}Managed 3-6 direct reports, adapting to team size.
 }
 
-\Description{Work closely with stakeholders and product managers to define roadmap and priorities
+\Description{Collaborated with stakeholders and product managers to define roadmap and priorities.
 }
 
-\Description{Replace 1st generation of the Babylon conversation platform with 2nd generation without a big bang
+\Description{Successfully replaced 1st generation Babylon conversation platform with 2nd generation seamlessly.
 }
 
-\Description{Make sure SSDLC is followed and that the team is following best practices
+\Description{Ensured strict compliance with SSDLC and best practices within the team.
 }
 
-\Description{Put pressure on the business to make sure my team have enough time to not cumulate too much technical debt
+\Description{Advocated for a balanced workload to prevent technical debt accumulation.
 }
 
-\Description{Put pressure on the team to make sure what they deliver is aligned with the client's needs
+\Description{Aligned team deliverables with client requirements through rigorous oversight.
 }
 
-\Description{Do pairing sessions with team members to make sure knowledge is shared
-}
-
-\Description{Build state storage format for conversation state to with delta layers allowing undo peration. The state is strongly typed and schema changes were handled automatically and in a safe manner
+\Description{Conducted knowledge-sharing pairing sessions with team members.
 }
 
 
-\Description{python $\sbullet$ flask $\sbullet$ k8s $\sbullet$ postgres $\sbullet$ redis $\sbullet$ kafka}
+\Description{python $\sbullet$ flask $\sbullet$ kubernetes $\sbullet$ terraform $\sbullet$ postgres $\sbullet$ redis $\sbullet$ kafka $\sbullet$ typescript $\sbullet$ rest api}
 %------------------------------------------------
 
 \NewEntry{2019-2000}{Senior Software Engineer}
 
 
-\Description{\MarginText{Babylon Health\\\textsc{London}}Part of the design team which created the migration plan from 1st generation of the Babylon conversation platform (monolith) to 2nd generation (microservices)
+\Description{\MarginText{Babylon Health\\\textsc{London}}Designed migration plan from 1st generation monolith to 2nd generation microservices for Babylon conversation platform
 }
 
-\Description{Create various CLI tools used by the team and other teams to make integration with the Conversation Platform easier
+\Description{Developed CLI tools to facilitate integration with the Conversation Platform for internal and external teams.
 }
 
 
-\Description{python $\sbullet$ flask $\sbullet$ k8s $\sbullet$ postgresql $\sbullet$ redis $\sbullet$ kafka}
+\Description{python $\sbullet$ flask $\sbullet$ kubernetes $\sbullet$ terraform $\sbullet$ postgresql $\sbullet$ redis $\sbullet$ kafka $\sbullet$ rest api}
 %------------------------------------------------
 
 \NewEntry{2019}{Senior Software Engineer}
@@ -162,7 +157,10 @@
 \Description{\MarginText{B2C2\\\textsc{London}}Created the Trade History collecting system
 }
 
-\Description{REST API crawler was created as cloud task, raw data were processed with a set of stateless procedures
+\Description{Implemented REST API crawler as cloud task and processed raw data using stateless procedures
+}
+
+\Description{Integrated with multiple exchange APIs
 }
 
 
@@ -172,51 +170,51 @@
 \NewEntry{2017-2019}{Senior Python Developer}
 
 
-\Description{\MarginText{Springer Nature\\\textsc{London}}Build and iterate internal CI/CD system and tooling
+\Description{\MarginText{Springer Nature\\\textsc{London}}Built and improved internal CI/CD system and tools
 }
 
-\Description{Migrate legacy code to python 3
+\Description{Managed migration of legacy code to Python3
 }
 
-\Description{Define build pipelines used by other teams with an easy definition of build steps
+\Description{Defined build pipelines for other teams with simplified build steps
 }
 
-\Description{Develop tooling for Cloud Foundry deployments
+\Description{Created tooling for Cloud Foundry deployments
 }
 
 
-\Description{python $\sbullet$ OpenStack $\sbullet$ celery}
+\Description{python $\sbullet$ OpenStack $\sbullet$ CloudFoundry $\sbullet$ celery}
 %------------------------------------------------
 
 \NewEntry{2015-2017}{Senior Engineer}
 
 
-\Description{\MarginText{Shortlist\\\textsc{San Francisco (remote)}}Developing the backend for the workforce management platform project
+\Description{\MarginText{Shortlist\\\textsc{San Francisco (remote)}}Developed backend for the workforce management platform project.
 }
 
-\Description{Cooperate with frontend engineers to define usable REST API
+\Description{Collaborated with frontend engineers to create a functional REST API.
 }
 
-\Description{Design and implement a data model for the system
+\Description{Designed and implemented a data model for the system.
 }
 
 
-\Description{python $\sbullet$ django $\sbullet$ postgresql $\sbullet$ django rest framework $\sbullet$ javascript $\sbullet$ angular}
+\Description{python $\sbullet$ django $\sbullet$ postgresql $\sbullet$ django rest framework $\sbullet$ javascript $\sbullet$ angular $\sbullet$ rest api}
 %------------------------------------------------
 
 \NewEntry{2012-2015}{Senior Python Developer}
 
 
-\Description{\MarginText{ZedMedia\\\textsc{Globally (remote)}}Maintain a Django-based application
+\Description{\MarginText{ZedMedia\\\textsc{Globally (remote)}}Maintained a Django-based applications.
 }
 
-\Description{Implement a scoring algorithm for articles to be present in a different part of the service
+\Description{Implemented a scoring algorithm for articles to be displayed in a different section of the service.
 }
 
-\Description{Extend and maintain database models
+\Description{Extended and maintained database models.
 }
 
-\Description{Create tools for easy A/B tests
+\Description{Developed tools to facilitate A/B testing.
 }
 
 
@@ -226,10 +224,10 @@
 \NewEntry{2010-2012}{Senior Python Developer}
 
 
-\Description{\MarginText{Intelligent Elite\\\textsc{Barcelona}}Create an A/B testing suite with detailed statistics about user behaviour
+\Description{\MarginText{Intelligent Elite\\\textsc{Barcelona}}Developed an A/B testing suite with in-depth user behavior statistics.
 }
 
-\Description{Improve the mailing system
+\Description{Enhanced the mailing system.
 }
 
 
