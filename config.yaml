@@ -7,25 +7,81 @@ linkedin: https://www.linkedin.com/in/dswistowski/
 
 about_me:
   - >
-    I am software developer with 15+ years of experience in the industry. I
-    have worked on a wide range of projects, from small web applications to
-    large enterprise systems. I am a polyglot programmer, but I have a
-    particular interest in python, typescript and distributed systems.
+    I am a staff-level software engineer with 15+ years of experience building
+    reliable backend systems, data platforms, and distributed applications. I
+    have worked across startups and large organisations, delivering everything
+    from web applications to large-scale enterprise platforms. I am a polyglot
+    programmer with particular expertise in Python, TypeScript, and distributed
+    systems.
+
 work:
-  - date: "Oct 2023-Oct 2024"
+  - date: "Oct 2025 - Present"
+    title: "Staff Software Engineer"
+    where: "Figment"
+    city: "London / Remote"
+    description:
+      - >
+        Leading the integration of Rated indexers into Figment infrastructure,
+        aligning architecture and delivery with the broader platform strategy.
+      - >
+        Driving the migration of existing indexers to the new Figment stack,
+        including the move from ECS to Kubernetes and from an in-house
+        Bytewax-based execution model to Temporal.
+      - >
+        Improving the reliability, maintainability, and scalability of indexing
+        systems used to support blockchain data products.
+    stack:
+      - python
+      - postgresql
+      - web3
+      - temporal
+      - BigQuery
+      - terraform
+      - ECS
+      - kubernetes
+
+  - date: "Oct 2024 - Oct 2025"
+    title: "Staff Software Engineer"
+    where: "Rated Labs Ltd"
+    city: "London / Remote"
+    description:
+      - >
+        Architected and led a major refactor of the Ethereum indexer, rewriting
+        the codebase to improve observability, testability, and horizontal
+        scalability.
+      - >
+        Improved the operational maturity of other indexers through better
+        deployment automation, monitoring, and production support practices.
+      - >
+        Built a reusable framework for indexers and data pipelines, including
+        tooling to generate and synchronize integrations for BigQuery,
+        Protobuf, and Aurora.
+    stack:
+      - python
+      - postgresql
+      - web3
+      - bytewax
+      - BigQuery
+      - ansible
+      - ECS
+
+  - date: "Oct 2023 - Oct 2024"
     title: "Software Engineer"
     where: "Genie AI"
     city: "Remote"
     description:
       - >
-        Developed backend services with a focus on enhancing testability.
+        Built backend services with a strong emphasis on testability,
+        maintainability, and delivery speed.
       - >
-        Automated continuous delivery pipeline and streamlined building dependencies process.
+        Automated the continuous delivery pipeline and simplified dependency
+        build processes to improve developer efficiency.
       - >
-        Integrated with multiple exchanges and blockchains including Deribit, OKX and Solana.
+        Integrated platform components with multiple exchanges and blockchains,
+        including Deribit, OKX, and Solana.
       - >
-        Expanded asset metric portfolio ensuring efficient calculation methods.
-
+        Expanded the asset metrics portfolio while keeping calculation
+        pipelines efficient and scalable.
     stack:
       - python
       - fastapi
@@ -37,20 +93,21 @@ work:
       - graphql
       - rest api
 
-  - date: "2022-2023"
+  - date: "2022 - 2023"
     title: "Staff Engineer"
     where: "Babylon Health"
     city: "London"
     description:
       - >
-        Designed and constructed the 3rd generation of the Babylon conversation platform for asynchronous messaging.
+        Designed and delivered the third generation of Babylon's conversation
+        platform for asynchronous messaging.
       - >
-        Developed GraphQL API for northbound traffic and Rest API for east-west traffic.
+        Developed a GraphQL API for northbound traffic and a REST API for
+        east-west service communication.
       - >
-        Create Conversation Platform Test Runner, a tool for defining requirements and tests in Domain Specific
-        Language. COPteR provides an abstraction to have stable acceptance tests for the whole product, with
-        fraction-less integration with Babylon testing infrastructure.
-
+        Created Conversation Platform Test Runner (COPTeR), a domain-specific
+        testing tool that enabled stable, product-wide acceptance testing and
+        integrated smoothly with Babylon's testing infrastructure.
     stack:
       - python
       - fastapi
@@ -62,26 +119,26 @@ work:
       - graphql
       - rest api
 
-  - date: "2020-2022"
+  - date: "2020 - 2022"
     title: "Engineering Manager"
     where: "Babylon Health"
     city: "London"
     description:
       - >
-        Managed 3-6 direct reports, adapting to team size.
+        Managed 3 to 6 direct reports and supported team growth through
+        coaching, pairing, and knowledge-sharing.
       - >
-        Collaborated with stakeholders and product managers to define roadmap and priorities.
+        Worked closely with product managers and stakeholders to define roadmap
+        priorities and align delivery with business goals.
       - >
-        Successfully replaced 1st generation Babylon conversation platform with 2nd generation seamlessly.
+        Led the seamless transition from the first-generation conversation
+        platform to the second generation without service disruption.
       - >
-        Ensured strict compliance with SSDLC and best practices within the team.
+        Maintained high engineering standards, including SSDLC compliance and
+        strong operational practices.
       - >
-        Advocated for a balanced workload to prevent technical debt accumulation.
-      - >
-        Aligned team deliverables with client requirements through rigorous oversight.
-      - >
-        Conducted knowledge-sharing pairing sessions with team members.
-
+        Balanced short-term delivery with long-term technical sustainability,
+        helping the team avoid unnecessary technical debt.
     stack:
       - python
       - flask
@@ -93,16 +150,18 @@ work:
       - typescript
       - rest api
 
-  - date: "2019-2000"
+  - date: "2019 - 2020"
     title: "Senior Software Engineer"
     where: "Babylon Health"
     city: "London"
     description:
       - >
-        Designed migration plan from 1st generation monolith to 2nd generation microservices for Babylon conversation platform
+        Designed the migration strategy from a first-generation monolith to a
+        second-generation microservices architecture for the conversation
+        platform.
       - >
-        Developed CLI tools to facilitate integration with the Conversation Platform for internal and external teams.
-
+        Built CLI tooling to simplify internal and external integrations with
+        the Conversation Platform.
     stack:
       - python
       - flask
@@ -116,16 +175,16 @@ work:
   - date: "2019"
     title: "Senior Software Engineer"
     where: "B2C2"
-    city: London
+    city: "London"
     description:
       - >
-        Created the Trade History collecting system
+        Designed and built a trade history collection system for market data
+        processing.
       - >
-        Implemented REST API crawler as cloud task and processed raw data using stateless procedures
+        Implemented a REST API crawler as a cloud task and processed raw data
+        through stateless workflows.
       - >
-        Integrated with multiple exchange APIs
-        
-
+        Integrated with multiple exchange APIs to support data ingestion.
     stack:
       - python
       - aws
@@ -133,38 +192,38 @@ work:
       - sqs
       - elasticache
 
-  - date: "2017-2019"
+  - date: "2017 - 2019"
     title: "Senior Python Developer"
     where: "Springer Nature"
-    city: London
+    city: "London"
     description:
       - >
-        Built and improved internal CI/CD system and tools
+        Built and improved internal CI/CD systems and engineering tooling.
       - >
-        Managed migration of legacy code to Python3
+        Led migration efforts from legacy Python 2 systems to Python 3.
       - >
-         Defined build pipelines for other teams with simplified build steps
+        Defined simplified build pipelines to help other teams improve delivery
+        workflows.
       - >
-        Created tooling for Cloud Foundry deployments
-
+        Developed deployment tooling for Cloud Foundry environments.
     stack:
       - python
       - OpenStack
       - CloudFoundry
       - celery
 
-  - date: "2015-2017"
+  - date: "2015 - 2017"
     title: "Senior Engineer"
     where: "Shortlist"
-    city: San Francisco (remote)
+    city: "San Francisco / Remote"
     description:
       - >
-        Developed backend for the workforce management platform project.
+        Built backend services for a workforce management platform.
       - >
-        Collaborated with frontend engineers to create a functional REST API.
+        Partnered with frontend engineers to design and deliver a robust REST
+        API.
       - >
-        Designed and implemented a data model for the system.
-
+        Designed and implemented the core data model for the system.
     stack:
       - python
       - django
@@ -174,20 +233,21 @@ work:
       - angular
       - rest api
 
-  - date: "2012-2015"
+  - date: "2012 - 2015"
     title: "Senior Python Developer"
     where: "ZedMedia"
-    city: Globally (remote)
+    city: "Globally / Remote"
     description:
       - >
-        Maintained a Django-based applications.
+        Maintained and extended Django-based applications serving editorial and
+        publishing workflows.
       - >
-        Implemented a scoring algorithm for articles to be displayed in a different section of the service.
+        Implemented a scoring algorithm for ranking articles across different
+        sections of the service.
       - >
-        Extended and maintained database models.
+        Extended and maintained database models supporting product evolution.
       - >
-        Developed tools to facilitate A/B testing.
-
+        Developed tooling to support A/B testing and experimentation.
     stack:
       - python
       - django
@@ -195,16 +255,15 @@ work:
       - javascript
       - perl
 
-  - date: "2010-2012"
+  - date: "2010 - 2012"
     title: "Senior Python Developer"
     where: "Intelligent Elite"
-    city: Barcelona
+    city: "Barcelona"
     description:
       - >
-        Developed an A/B testing suite with in-depth user behavior statistics.
+        Built an A/B testing suite with detailed user behaviour analytics.
       - >
-        Enhanced the mailing system.
-
+        Improved the platform's mailing system and supporting infrastructure.
     stack:
       - python
       - django
@@ -212,67 +271,68 @@ work:
       - solr
       - mongodb
 
-  - date: "2008-2010"
+  - date: "2008 - 2010"
     title: "Python Developer"
     where: "OMS"
-    city: Bielsko-Biała, Poland
+    city: "Bielsko-Biała, Poland"
     description:
       - >
-        Design and implement a production management system
+        Designed and implemented a production management system.
       - >
-        Managing a team of 4 junior engineers
-
+        Managed and supported a team of 4 junior engineers.
     stack:
       - python
       - django
       - mysql
 
-  - date: "2007-2008"
-    title: "PHP Junior developer"
+  - date: "2007 - 2008"
+    title: "Junior PHP Developer"
     where: "Gery Design"
-    city: Wrocław, Poland
+    city: "Wrocław, Poland"
     description:
       - >
-        Migrate old PHP projects to the Django framework
+        Migrated legacy PHP projects to Django.
       - >
-        Maintenance and optimization of existing projects
-
+        Maintained and optimized existing client projects.
     stack:
       - php
       - javascript
       - python
       - django
-      -
+
 education:
-  - place: The University of Silesia
-    city: Katowice
-    faculty: Computer Science and Materials Science
-    date: 2005 - 2007
-    what: Master of Computer Science
-    thesis: Particle Swarm Optimization in funding function minimum
-  - place: The University of Silesia
-    city: Katowice
-    faculty: Computer Science and Materials Science
-    date: 2002 - 2005
-    what: Bachelor of Computer Science
-    thesis: Developing an electronic repository for undergraduate theses
+  - place: "The University of Silesia"
+    city: "Katowice"
+    faculty: "Computer Science and Materials Science"
+    date: "2005 - 2007"
+    what: "Master of Computer Science"
+    thesis: "Particle Swarm Optimization in function minimization"
+
+  - place: "The University of Silesia"
+    city: "Katowice"
+    faculty: "Computer Science and Materials Science"
+    date: "2002 - 2005"
+    what: "Bachelor of Computer Science"
+    thesis: "Developing an electronic repository for undergraduate theses"
 
 publications:
   - title: "Comparative Study: ACO and EC for TSP"
-    date: 2006
-    journal: kaeiog
-    abstract: The paper concentrates on the Traveling Salesman Problem solved by evolutionary and ACO algorithms
-    asset: kaeiog
+    date: "2006"
+    journal: "kaeiog"
+    abstract: >
+      The paper focuses on the Traveling Salesman Problem solved using
+      evolutionary and ACO algorithms.
+    asset: "kaeiog"
 
 talks:
-  - where: PyCon UK
-    title: c?attrs how use it with rest microservices
+  - where: "PyCon UK"
+    title: "cattrs: how to use it with REST microservices"
     presentation: https://debonair-mitten.surge.sh/
     url: https://www.youtube.com/watch?v=jkq-p6H85Rs
-    date: 2019
+    date: "2019"
 
 interests:
   - Hiking
   - Social dancing
   - Cooking
-  - Video Games
+  - Video games
