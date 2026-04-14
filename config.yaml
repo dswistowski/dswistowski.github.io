@@ -7,12 +7,63 @@ linkedin: https://www.linkedin.com/in/dswistowski/
 
 about_me:
   - >
-    I am a staff-level software engineer with 15+ years of experience building
-    reliable backend systems, data platforms, and distributed applications. I
-    have worked across startups and large organisations, delivering everything
-    from web applications to large-scale enterprise platforms. I am a polyglot
-    programmer with particular expertise in Python, TypeScript, and distributed
-    systems.
+    Staff-level software engineer with 15+ years of experience building
+    reliable backend systems, data platforms, and distributed applications
+    across startups and large organisations. Strong track record leading
+    cross-cutting migrations, improving operational maturity, and delivering
+    scalable data and indexing pipelines. Polyglot with deep Python expertise
+    and strong TypeScript experience.
+
+core_skills:
+  - Distributed systems
+  - Cloud-native engineering
+  - Platform migrations
+  - Data pipelines and streaming
+  - API design
+  - Observability and testability
+  - CI/CD and developer productivity
+  - Production operations
+
+technology:
+  languages:
+    - Python
+    - TypeScript
+    - JavaScript
+    - PHP
+    - Perl
+  backend:
+    - FastAPI
+    - Flask
+    - Django
+    - Django REST Framework
+  data_storage:
+    - PostgreSQL
+    - BigQuery
+    - Redis
+    - Elasticsearch
+    - Kafka
+    - MySQL
+    - MongoDB
+    - Solr
+  cloud_infra:
+    - Kubernetes
+    - Terraform
+    - AWS Lambda
+    - AWS SQS
+    - AWS ElastiCache
+    - ECS
+    - OpenStack
+    - Cloud Foundry
+  workflow_data_processing:
+    - Temporal
+    - Bytewax
+  other:
+    - Web3
+    - GraphQL
+    - React
+    - React Native
+    - Angular
+    - Ansible
 
 work:
   - date: "Oct 2025 - Present"
@@ -25,20 +76,19 @@ work:
         aligning architecture and delivery with the broader platform strategy.
       - >
         Driving the migration of existing indexers to the new Figment stack,
-        including the move from ECS to Kubernetes and from an in-house
-        Bytewax-based execution model to Temporal.
+        including ECS to Kubernetes and Bytewax-based execution to Temporal.
       - >
         Improving the reliability, maintainability, and scalability of indexing
-        systems used to support blockchain data products.
+        systems supporting blockchain data products.
     stack:
-      - python
-      - postgresql
-      - web3
-      - temporal
+      - Python
+      - PostgreSQL
+      - Web3
+      - Temporal
       - BigQuery
-      - terraform
+      - Terraform
       - ECS
-      - kubernetes
+      - Kubernetes
 
   - date: "Oct 2024 - Oct 2025"
     title: "Staff Software Engineer"
@@ -50,19 +100,19 @@ work:
         the codebase to improve observability, testability, and horizontal
         scalability.
       - >
-        Improved the operational maturity of other indexers through better
+        Improved the operational maturity of other indexers through stronger
         deployment automation, monitoring, and production support practices.
       - >
         Built a reusable framework for indexers and data pipelines, including
-        tooling to generate and synchronize integrations for BigQuery,
+        tooling to generate and synchronise integrations for BigQuery,
         Protobuf, and Aurora.
     stack:
-      - python
-      - postgresql
-      - web3
-      - bytewax
+      - Python
+      - PostgreSQL
+      - Web3
+      - Bytewax
       - BigQuery
-      - ansible
+      - Ansible
       - ECS
 
   - date: "Oct 2023 - Oct 2024"
@@ -83,15 +133,15 @@ work:
         Expanded the asset metrics portfolio while keeping calculation
         pipelines efficient and scalable.
     stack:
-      - python
-      - fastapi
-      - kubernetes
-      - terraform
-      - postgresql
-      - typescript
-      - react
-      - graphql
-      - rest api
+      - Python
+      - FastAPI
+      - Kubernetes
+      - Terraform
+      - PostgreSQL
+      - TypeScript
+      - React
+      - GraphQL
+      - REST APIs
 
   - date: "2022 - 2023"
     title: "Staff Engineer"
@@ -99,25 +149,25 @@ work:
     city: "London"
     description:
       - >
-        Designed and delivered the third generation of Babylon's conversation
+        Designed and delivered the third generation of Babylon’s conversation
         platform for asynchronous messaging.
       - >
         Developed a GraphQL API for northbound traffic and a REST API for
         east-west service communication.
       - >
-        Created Conversation Platform Test Runner (COPTeR), a domain-specific
-        testing tool that enabled stable, product-wide acceptance testing and
-        integrated smoothly with Babylon's testing infrastructure.
+        Created COPTeR (Conversation Platform Test Runner), a domain-specific
+        testing tool enabling stable, product-wide acceptance testing
+        integrated with Babylon’s testing infrastructure.
     stack:
-      - python
-      - fastapi
-      - kubernetes
-      - elasticsearch
-      - kafka
-      - typescript
-      - react native
-      - graphql
-      - rest api
+      - Python
+      - FastAPI
+      - Kubernetes
+      - Elasticsearch
+      - Kafka
+      - TypeScript
+      - React Native
+      - GraphQL
+      - REST APIs
 
   - date: "2020 - 2022"
     title: "Engineering Manager"
@@ -128,27 +178,26 @@ work:
         Managed 3 to 6 direct reports and supported team growth through
         coaching, pairing, and knowledge-sharing.
       - >
-        Worked closely with product managers and stakeholders to define roadmap
+        Partnered with product managers and stakeholders to define roadmap
         priorities and align delivery with business goals.
       - >
-        Led the seamless transition from the first-generation conversation
-        platform to the second generation without service disruption.
+        Led the transition from the first-generation conversation platform to
+        the second generation without service disruption.
       - >
         Maintained high engineering standards, including SSDLC compliance and
-        strong operational practices.
+        operational practices.
       - >
-        Balanced short-term delivery with long-term technical sustainability,
-        helping the team avoid unnecessary technical debt.
+        Balanced short-term delivery with long-term maintainability.
     stack:
-      - python
-      - flask
-      - kubernetes
-      - terraform
-      - postgres
-      - redis
-      - kafka
-      - typescript
-      - rest api
+      - Python
+      - Flask
+      - Kubernetes
+      - Terraform
+      - PostgreSQL
+      - Redis
+      - Kafka
+      - TypeScript
+      - REST APIs
 
   - date: "2019 - 2020"
     title: "Senior Software Engineer"
@@ -163,14 +212,14 @@ work:
         Built CLI tooling to simplify internal and external integrations with
         the Conversation Platform.
     stack:
-      - python
-      - flask
-      - kubernetes
-      - terraform
-      - postgresql
-      - redis
-      - kafka
-      - rest api
+      - Python
+      - Flask
+      - Kubernetes
+      - Terraform
+      - PostgreSQL
+      - Redis
+      - Kafka
+      - REST APIs
 
   - date: "2019"
     title: "Senior Software Engineer"
@@ -186,11 +235,11 @@ work:
       - >
         Integrated with multiple exchange APIs to support data ingestion.
     stack:
-      - python
-      - aws
-      - lambda
-      - sqs
-      - elasticache
+      - Python
+      - AWS
+      - Lambda
+      - SQS
+      - ElastiCache
 
   - date: "2017 - 2019"
     title: "Senior Python Developer"
@@ -202,15 +251,15 @@ work:
       - >
         Led migration efforts from legacy Python 2 systems to Python 3.
       - >
-        Defined simplified build pipelines to help other teams improve delivery
+        Defined simplified build pipelines to help teams improve delivery
         workflows.
       - >
         Developed deployment tooling for Cloud Foundry environments.
     stack:
-      - python
+      - Python
       - OpenStack
-      - CloudFoundry
-      - celery
+      - Cloud Foundry
+      - Celery
 
   - date: "2015 - 2017"
     title: "Senior Engineer"
@@ -218,42 +267,26 @@ work:
     city: "San Francisco / Remote"
     description:
       - >
-        Built backend services for a workforce management platform.
-      - >
-        Partnered with frontend engineers to design and deliver a robust REST
-        API.
-      - >
-        Designed and implemented the core data model for the system.
+        Built backend services and REST APIs and designed the core data model.
     stack:
-      - python
-      - django
-      - postgresql
-      - django rest framework
-      - javascript
-      - angular
-      - rest api
+      - Python
+      - Django
+      - PostgreSQL
 
   - date: "2012 - 2015"
     title: "Senior Python Developer"
     where: "ZedMedia"
-    city: "Globally / Remote"
+    city: "Global / Remote"
     description:
       - >
-        Maintained and extended Django-based applications serving editorial and
-        publishing workflows.
-      - >
-        Implemented a scoring algorithm for ranking articles across different
-        sections of the service.
-      - >
-        Extended and maintained database models supporting product evolution.
-      - >
-        Developed tooling to support A/B testing and experimentation.
+        Built Django apps for publishing workflows, a ranking algorithm, and
+        A/B testing tooling.
     stack:
-      - python
-      - django
-      - postgresql
-      - javascript
-      - perl
+      - Python
+      - Django
+      - PostgreSQL
+      - JavaScript
+      - Perl
 
   - date: "2010 - 2012"
     title: "Senior Python Developer"
@@ -261,15 +294,14 @@ work:
     city: "Barcelona"
     description:
       - >
-        Built an A/B testing suite with detailed user behaviour analytics.
-      - >
-        Improved the platform's mailing system and supporting infrastructure.
+        Built an A/B testing suite, behaviour analytics, and mailing
+        infrastructure.
     stack:
-      - python
-      - django
-      - postgresql
-      - solr
-      - mongodb
+      - Python
+      - Django
+      - PostgreSQL
+      - Solr
+      - MongoDB
 
   - date: "2008 - 2010"
     title: "Python Developer"
@@ -277,13 +309,11 @@ work:
     city: "Bielsko-Biała, Poland"
     description:
       - >
-        Designed and implemented a production management system.
-      - >
-        Managed and supported a team of 4 junior engineers.
+        Designed and implemented a production management system and led a team
+        of 4 junior engineers.
     stack:
-      - python
-      - django
-      - mysql
+      - Python
+      - MySQL
 
   - date: "2007 - 2008"
     title: "Junior PHP Developer"
@@ -291,26 +321,22 @@ work:
     city: "Wrocław, Poland"
     description:
       - >
-        Migrated legacy PHP projects to Django.
-      - >
-        Maintained and optimized existing client projects.
+        Migrated legacy PHP projects to Django and maintained client projects.
     stack:
-      - php
-      - javascript
-      - python
-      - django
+      - PHP
+      - JavaScript
+      - Python
+      - Django
 
 education:
-  - place: "The University of Silesia"
+  - place: "University of Silesia"
     city: "Katowice"
-    faculty: "Computer Science and Materials Science"
     date: "2005 - 2007"
     what: "Master of Computer Science"
-    thesis: "Particle Swarm Optimization in function minimization"
+    thesis: "Particle Swarm Optimisation in function minimisation"
 
-  - place: "The University of Silesia"
+  - place: "University of Silesia"
     city: "Katowice"
-    faculty: "Computer Science and Materials Science"
     date: "2002 - 2005"
     what: "Bachelor of Computer Science"
     thesis: "Developing an electronic repository for undergraduate theses"
@@ -318,17 +344,11 @@ education:
 publications:
   - title: "Comparative Study: ACO and EC for TSP"
     date: "2006"
-    journal: "kaeiog"
-    abstract: >
-      The paper focuses on the Traveling Salesman Problem solved using
-      evolutionary and ACO algorithms.
-    asset: "kaeiog"
+    journal: "KAEIOG"
 
 talks:
   - where: "PyCon UK"
-    title: "cattrs: how to use it with REST microservices"
-    presentation: https://debonair-mitten.surge.sh/
-    url: https://www.youtube.com/watch?v=jkq-p6H85Rs
+    title: "Typed attrs dataclasses with cattrs converters for JSON REST microservices"
     date: "2019"
 
 interests:

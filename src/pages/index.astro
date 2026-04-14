@@ -1,216 +1,296 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import yaml from "../../config.yaml";
-import type { Asset, Config } from "../config";
+import type { Asset, Config, Technology } from "../config";
 import kaeiog from "../assets/kaeiog.pdf";
-import ListRow from "../components/ListRow.astro";
-import Timeline from "../components/Timeline.astro";
-import TimelineElement from "../components/TimelineElement.astro";
-import Paragraphs from "../components/Paragraphs.astro";
-import SmallPoints from "../components/SmallPoints.astro";
-import Section from "../components/Section.astro";
-import List from "../components/List.astro";
-import Accent from "../components/Accent.astro";
-import Button from "../components/Button.astro";
-import Arrow from "../components/Arrow.astro";
 import GithubIcon from "../components/GithubIcon.astro";
 import LinkedInIcon from "../components/LinkedInIcon.astro";
-import cvPdf from "../../latex/cv.pdf";
 import PDFIcon from "../components/PDFIcon.astro";
 import IconLink from "../components/IconLink.astro";
+import cvPdf from "../../latex/cv.pdf";
 
-const assets: Record<Asset, string> = {
+const assets: Partial<Record<Asset, string>> = {
   kaeiog,
 };
 
 const config = yaml as Config;
+
+const technologyLabels: Record<keyof Technology, string> = {
+  languages: "Languages",
+  backend: "Backend",
+  data_storage: "Data & Storage",
+  cloud_infra: "Cloud & Infrastructure",
+  workflow_data_processing: "Workflow & Data Processing",
+  other: "Other",
+};
+
+const technologyEntries = Object.entries(config.technology ?? {}).filter(
+  ([, value]) => Array.isArray(value) && value.length > 0,
+) as [keyof Technology, string[]][];
+
+const contactLinks = [
+  {
+    label: config.email,
+    href: `mailto:${config.email}`,
+  },
+  {
+    label: config.phone,
+    href: `tel:${config.phone}`,
+  },
+  {
+    label: "LinkedIn",
+    href: config.linkedin,
+  },
+  {
+    label: "GitHub",
+    href: config.github,
+  },
+];
 ---
 
 <Layout title={`${config.name} CV`}>
-  <header
-    class="dark:backdrop-brightness-75 backdrop-brightness-105 shadow pt-8"
-  >
-    <div class="max-w-4xl m-auto py-4 px-8">
-      <div class="flex gap-2 justify-end">
-        <IconLink href={config.github}>
-          <GithubIcon />
-        </IconLink>
-        <IconLink href={config.linkedin}>
-          <LinkedInIcon />
-        </IconLink>
-        <IconLink href={cvPdf}>
-          <PDFIcon />
-        </IconLink>
+  <main class="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-5xl rounded-[2rem] border border-stone-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+      <header class="border-b border-stone-200 px-6 py-8 sm:px-10 lg:px-12">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+          <div class="max-w-3xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
+              Curriculum Vitae
+            </p>
+            <h1 class="mt-3 font-heading text-4xl font-bold text-slate-950 sm:text-5xl">
+              {config.name}
+            </h1>
+            <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-600">
+              {
+                contactLinks.map((item) => (
+                  <a href={item.href} class="hover:text-slate-900">
+                    {item.label}
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 self-start">
+            <IconLink href={config.github}>
+              <GithubIcon />
+            </IconLink>
+            <IconLink href={config.linkedin}>
+              <LinkedInIcon />
+            </IconLink>
+            <IconLink href={cvPdf}>
+              <PDFIcon />
+            </IconLink>
+          </div>
+        </div>
+
+        <div class="mt-6 grid gap-3">
+          {
+            config.about_me.map((paragraph) => (
+              <p class="max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
+                {paragraph}
+              </p>
+            ))
+          }
+        </div>
+      </header>
+
+      <div class="grid gap-10 px-6 py-8 sm:px-10 lg:grid-cols-[minmax(0,1fr)_18rem] lg:px-12">
+        <div class="space-y-10">
+          <section>
+            <h2>Professional Experience</h2>
+            <div class="mt-4 space-y-8">
+              {
+                config.work.map((work) => (
+                  <article class="border-l-2 border-stone-200 pl-5">
+                    <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+                      <div>
+                        <h3 class="text-xl font-semibold text-slate-950">
+                          {work.title}
+                        </h3>
+                        <p class="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">
+                          {work.where} • {work.city}
+                        </p>
+                      </div>
+                      <p class="text-sm font-semibold text-slate-500">
+                        {work.date}
+                      </p>
+                    </div>
+
+                    <ul class="mt-4 space-y-2 text-base leading-7 text-slate-700">
+                      {
+                        work.description.map((item) => (
+                          <li class="flex gap-3">
+                            <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-slate-400" />
+                            <span>{item}</span>
+                          </li>
+                        ))
+                      }
+                    </ul>
+
+                    <div class="mt-4 flex flex-wrap gap-2">
+                      {
+                        work.stack.map((item) => (
+                          <span class="rounded-full border border-stone-300 bg-stone-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
+                            {item}
+                          </span>
+                        ))
+                      }
+                    </div>
+                  </article>
+                ))
+              }
+            </div>
+          </section>
+
+          {config.education && config.education.length > 0 && (
+            <section>
+              <h2>Education</h2>
+              <div class="mt-4 space-y-5">
+                {
+                  config.education.map((item) => (
+                    <article class="rounded-2xl border border-stone-200 bg-stone-50 px-5 py-4">
+                      <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                        <div>
+                          <h3 class="text-lg font-semibold text-slate-950">
+                            {item.what}
+                          </h3>
+                          <p class="text-sm text-slate-600">
+                            {item.place}, {item.city}
+                          </p>
+                        </div>
+                        <p class="text-sm font-medium text-slate-500">
+                          {item.date}
+                        </p>
+                      </div>
+                      {item.thesis && (
+                        <p class="mt-3 text-sm leading-6 text-slate-700">
+                          <span class="font-semibold text-slate-900">Thesis:</span>{" "}
+                          {item.thesis}
+                        </p>
+                      )}
+                    </article>
+                  ))
+                }
+              </div>
+            </section>
+          )}
+
+          {config.publications && config.publications.length > 0 && (
+            <section>
+              <h2>Publications</h2>
+              <div class="mt-4 space-y-4">
+                {
+                  config.publications.map((publication) => {
+                    const assetHref = publication.asset
+                      ? assets[publication.asset]
+                      : undefined;
+
+                    return (
+                      <article class="rounded-2xl border border-stone-200 px-5 py-4">
+                        <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                          <div>
+                            <h3 class="text-lg font-semibold text-slate-950">
+                              {assetHref ? (
+                                <a href={assetHref}>{publication.title}</a>
+                              ) : (
+                                publication.title
+                              )}
+                            </h3>
+                            <p class="text-sm uppercase tracking-[0.16em] text-slate-500">
+                              {publication.journal}
+                            </p>
+                          </div>
+                          <p class="text-sm font-medium text-slate-500">
+                            {publication.date}
+                          </p>
+                        </div>
+                        {publication.abstract && (
+                          <p class="mt-3 text-sm leading-6 text-slate-700">
+                            {publication.abstract}
+                          </p>
+                        )}
+                      </article>
+                    );
+                  })
+                }
+              </div>
+            </section>
+          )}
+        </div>
+
+        <aside class="space-y-8 lg:pl-2">
+          {config.core_skills && config.core_skills.length > 0 && (
+            <section class="rounded-2xl bg-slate-950 px-5 py-5 text-white">
+              <h2 class="text-stone-300">Core Skills</h2>
+              <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-100">
+                {
+                  config.core_skills.map((skill) => (
+                    <li class="border-b border-white/10 pb-2 last:border-b-0 last:pb-0">
+                      {skill}
+                    </li>
+                  ))
+                }
+              </ul>
+            </section>
+          )}
+
+          {technologyEntries.length > 0 && (
+            <section>
+              <h2>Technology</h2>
+              <div class="mt-4 space-y-4">
+                {
+                  technologyEntries.map(([key, items]) => (
+                    <article class="rounded-2xl border border-stone-200 px-4 py-4">
+                      <h3 class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-600">
+                        {technologyLabels[key]}
+                      </h3>
+                      <p class="mt-2 text-sm leading-6 text-slate-700">
+                        {items.join(" • ")}
+                      </p>
+                    </article>
+                  ))
+                }
+              </div>
+            </section>
+          )}
+
+          {config.talks && config.talks.length > 0 && (
+            <section>
+              <h2>Talks</h2>
+              <div class="mt-4 space-y-3">
+                {
+                  config.talks.map((talk) => (
+                    <article class="rounded-2xl border border-stone-200 px-4 py-4">
+                      <p class="text-sm font-semibold text-slate-900">
+                        {talk.title}
+                      </p>
+                      <p class="mt-1 text-sm text-slate-600">
+                        {talk.where} • {talk.date}
+                      </p>
+                      <div class="mt-3 flex flex-wrap gap-3 text-sm">
+                        {talk.presentation && (
+                          <a href={talk.presentation}>Slides</a>
+                        )}
+                        {talk.url && <a href={talk.url}>Video</a>}
+                      </div>
+                    </article>
+                  ))
+                }
+              </div>
+            </section>
+          )}
+
+          {config.interests && config.interests.length > 0 && (
+            <section>
+              <h2>Interests</h2>
+              <p class="mt-4 text-sm leading-6 text-slate-700">
+                {config.interests.join(" • ")}
+              </p>
+            </section>
+          )}
+        </aside>
       </div>
-
-      <h1
-        class="font-extrabold md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-tr dark:from-purple-400 dark:to-purple-600 from-purple-600 to-purple-900"
-      >
-        {config.name}
-      </h1>
-
-      <Section title="personal information">
-        <List>
-          <ListRow title="Email address">
-            <a href={`mailto:${config.email}`}>{config.email}</a>
-          </ListRow>
-
-          <ListRow title="Phone number">
-            <a href={`tel:${config.phone}`}>{config.phone}</a>
-          </ListRow>
-        </List>
-      </Section>
     </div>
-  </header>
-  <div class="m-auto py-4 px-8 max-w-4xl">
-    <div
-      class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
-    >
-      <svg
-        class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
-        viewBox="0 0 1155 678"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
-          fill-opacity=".3"
-          d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-        ></path>
-        <defs>
-          <linearGradient
-            id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
-            x1="1155.49"
-            x2="-78.208"
-            y1=".177"
-            y2="474.645"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#9089FC"></stop>
-            <stop offset="1" stop-color="#FF80B5"></stop>
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-
-    <Section>
-      {
-        config.about_me.map((paragraph) => (
-          <p class="mb-1 text-gray-900 text-2xl dark:text-gray-200">
-            {paragraph}
-          </p>
-        ))
-      }
-    </Section>
-
-    <Section title="work experience">
-      <Timeline>
-        {
-          config.work.map((work) => (
-            <TimelineElement date={work.date} subtitle={work.city}>
-              <Fragment slot="title">
-                {work.title} at <Accent>{work.where}</Accent>
-              </Fragment>
-              <Paragraphs paragraphs={work.description} />
-              <SmallPoints points={work.stack} />
-            </TimelineElement>
-          ))
-        }
-      </Timeline>
-    </Section>
-
-    <Section title="education">
-      <Timeline>
-        {
-          config.education.map((education) => (
-            <TimelineElement date={education.date}>
-              <Fragment slot="title">
-                {education.place} at <Accent>{education.city}</Accent>
-              </Fragment>
-              <h4>{education.city}</h4>
-              <Paragraphs
-                paragraphs={[education.faculty, `Thesis: ${education.thesis}`]}
-              />
-            </TimelineElement>
-          ))
-        }
-      </Timeline>
-    </Section>
-
-    <Section title="publications">
-      <Timeline>
-        {
-          config.publications.map((publication) => (
-            <TimelineElement date={publication.date}>
-              <Fragment slot="title">
-                <a href={assets[publication.asset]} target="_blank">
-                  {publication.title}
-                </a>
-                <Accent>{publication.journal}</Accent>
-              </Fragment>
-              <Paragraphs paragraphs={[publication.abstract]} />
-            </TimelineElement>
-          ))
-        }
-      </Timeline>
-    </Section>
-
-    <Section title="talks">
-      <Timeline>
-        {
-          config.talks.map((talk) => (
-            <>
-              <TimelineElement date={talk.date}>
-                <Fragment slot="title">
-                  {talk.title}&nbsp;<Accent>{talk.where}</Accent>
-                </Fragment>
-                <div class="flex gap-2">
-                  <Button href={talk.presentation}>
-                    Slides <Arrow />
-                  </Button>
-                  <Button href={talk.url}>
-                    Video <Arrow />
-                  </Button>
-                </div>
-              </TimelineElement>
-            </>
-          ))
-        }
-      </Timeline>
-    </Section>
-
-    <Section title="interests">
-      <SmallPoints points={config.interests} />
-    </Section>
-
-    <div
-      class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-    >
-      <svg
-        class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
-        viewBox="0 0 1155 678"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)"
-          fill-opacity=".3"
-          d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-        ></path>
-        <defs>
-          <linearGradient
-            id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
-            x1="1155.49"
-            x2="-78.208"
-            y1=".177"
-            y2="474.645"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#9089FC"></stop>
-            <stop offset="1" stop-color="#FF80B5"></stop>
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-  </div>
+  </main>
 </Layout>

@@ -1,10 +1,9 @@
 export type Education = {
   place: string;
   city: string;
-  faculty: string;
   date: string;
   what: string;
-  thesis: string;
+  thesis?: string;
 };
 
 export type Work = {
@@ -22,16 +21,25 @@ export type Publication = {
   title: string;
   date: string;
   journal: string;
-  abstract: string;
-  asset: Asset;
+  abstract?: string;
+  asset?: Asset;
 };
 
 export type Talk = {
   where: string;
   date: string;
   title: string;
-  presentation: string;
-  url: string;
+  presentation?: string;
+  url?: string;
+};
+
+export type Technology = {
+  languages?: string[];
+  backend?: string[];
+  data_storage?: string[];
+  cloud_infra?: string[];
+  workflow_data_processing?: string[];
+  other?: string[];
 };
 
 export type Config = {
@@ -42,10 +50,12 @@ export type Config = {
   linkedin: string;
 
   about_me: string[];
+  core_skills?: string[];
+  technology?: Technology;
 
   work: Work[];
-  education: Education[];
-  publications: Publication[];
-  talks: Talk[];
-  interests: string[];
+  education?: Education[];
+  publications?: Publication[];
+  talks?: Talk[];
+  interests?: string[];
 };
