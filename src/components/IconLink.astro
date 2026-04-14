@@ -9,6 +9,6 @@ const { href } = Astro.props;
 <a
   href={href}
   target="_blank"
-  class="dark:fill-white hover:transform hover:scale-125 transition ease-in-out"
+  class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-300 bg-white text-slate-700 shadow-sm transition hover:scale-105 hover:border-slate-400 hover:text-slate-950 [&_svg]:block [&_svg]:h-5 [&_svg]:w-5 [&_svg]:fill-current"
   ><slot />
 </a>
