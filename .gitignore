@@ -3,10 +3,10 @@
 latex/cv.aux
 latex/cv.out
 latex/*.pdf
-.python-version
 __pycache__
 .DS_Store
 .vscode
+.astro/
 
 # build output
 dist/
@@ -14,6 +14,7 @@ dist/
 
 # dependencies
 node_modules/
+.uv-cache/
 
 # logs
 npm-debug.log*

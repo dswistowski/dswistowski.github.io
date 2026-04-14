@@ -1,0 +1,4 @@
+set shell := ["zsh", "-cu"]
+
+build:
+    ./latexdockercmd.sh pdflatex cv.tex
