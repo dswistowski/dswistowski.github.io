@@ -33,6 +33,7 @@ technology:
     - Perl
   backend:
     - FastAPI
+    - Restate
     - Flask
     - Django
     - Django REST Framework
@@ -57,16 +58,53 @@ technology:
   workflow_data_processing:
     - Temporal
     - Bytewax
+    - Pydantic AI
   other:
     - Web3
     - GraphQL
     - React
+    - Next.js
     - React Native
     - Angular
     - Ansible
+    - Logfire
+    - Browserbase
+    - Playwright
 
 work:
-  - date: "Oct 2025 - Present"
+  - date: "Apr 2026 - Present"
+    title: "Staff Software Engineer"
+    where: "Waycore"
+    city: "London / Remote"
+    description:
+      - >
+        Building backend and product platform capabilities for financial
+        workflow automation, with a focus on reliable API design and production
+        operations.
+      - >
+        Developing AI-assisted and browser-driven integrations for complex
+        customer workflows, including robust execution, validation, and
+        observability.
+      - >
+        Working across the Python backend, TypeScript frontend, and cloud
+        infrastructure to improve delivery speed and system reliability.
+    stack:
+      - Python
+      - FastAPI
+      - PostgreSQL
+      - Restate
+      - Pydantic AI
+      - Logfire
+      - Browserbase
+      - Playwright
+      - TypeScript
+      - Next.js
+      - React
+      - Terraform
+      - AWS
+      - ECS
+
+  - date: "Oct 2025 - Apr 2026"
     title: "Staff Software Engineer"
     where: "Figment"
     city: "London / Remote"
