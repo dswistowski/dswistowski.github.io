@@ -18,10 +18,5 @@
   "devDependencies": {
     "@rollup/plugin-yaml": "^5.0.0"
   },
-  "pnpm": {
-    "overrides": {
-      "yaml": "2.9.0"
-    }
-  },
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "pnpm@11.9.0"
 }
