@@ -8,20 +8,20 @@ linkedin: https://www.linkedin.com/in/dswistowski/
 about_me:
   - >
     Staff-level software engineer with 15+ years of experience building
-    reliable backend systems, data platforms, and distributed applications
-    across startups and large organisations. Strong track record leading
-    cross-cutting migrations, improving operational maturity, and delivering
-    scalable data and indexing pipelines. Polyglot with deep Python expertise
-    and strong TypeScript experience.
+    backend systems, data platforms, and distributed applications. Most of my
+    recent work has been in Python, with a mix of platform design, production
+    operations, data pipelines, and TypeScript product work. I tend to work best
+    on messy systems that need clearer architecture, better reliability, and a
+    practical path to delivery.
 
 core_skills:
+  - Python backend engineering
   - Distributed systems
-  - Cloud-native engineering
-  - Platform migrations
-  - Data pipelines and streaming
+  - Data pipelines and indexing
+  - Cloud-native platforms
   - API design
-  - Observability and testability
-  - CI/CD and developer productivity
+  - Observability and testing
+  - CI/CD and developer tooling
   - Production operations
 
 technology:
@@ -78,16 +78,15 @@ work:
     city: "London / Remote"
     description:
       - >
-        Building backend and product platform capabilities for financial
-        workflow automation, with a focus on reliable API design and production
-        operations.
+        Building backend and product-platform features for financial workflow
+        automation, with a focus on API design, production behaviour, and clear
+        operational feedback.
       - >
         Developing AI-assisted and browser-driven integrations for complex
-        customer workflows, including robust execution, validation, and
-        observability.
+        customer workflows, including execution, validation, and observability.
       - >
-        Working across the Python backend, TypeScript frontend, and cloud
-        infrastructure to improve delivery speed and system reliability.
+        Working across Python services, TypeScript product surfaces, and AWS
+        infrastructure to make the system easier to ship and easier to operate.
     stack:
       - Python
       - FastAPI
@@ -110,14 +109,14 @@ work:
     city: "London / Remote"
     description:
       - >
-        Leading the integration of Rated indexers into Figment infrastructure,
-        aligning architecture and delivery with the broader platform strategy.
+        Led the integration of Rated indexers into Figment infrastructure and
+        helped align the architecture with the wider platform direction.
       - >
-        Driving the migration of existing indexers to the new Figment stack,
-        including ECS to Kubernetes and Bytewax-based execution to Temporal.
+        Moved existing indexers onto the new Figment stack, including ECS to
+        Kubernetes and Bytewax-based execution to Temporal.
       - >
-        Improving the reliability, maintainability, and scalability of indexing
-        systems supporting blockchain data products.
+        Improved reliability, maintainability, and scaling for indexing systems
+        used by blockchain data products.
     stack:
       - Python
       - PostgreSQL
@@ -134,12 +133,11 @@ work:
     city: "London / Remote"
     description:
       - >
-        Architected and led a major refactor of the Ethereum indexer, rewriting
-        the codebase to improve observability, testability, and horizontal
-        scalability.
+        Led a major refactor of the Ethereum indexer, rewriting the codebase to
+        make it easier to observe, test, and scale horizontally.
       - >
-        Improved the operational maturity of other indexers through stronger
-        deployment automation, monitoring, and production support practices.
+        Improved deployment automation, monitoring, and production support
+        practices across other indexers.
       - >
         Built a reusable framework for indexers and data pipelines, including
         tooling to generate and synchronise integrations for BigQuery,
@@ -159,11 +157,11 @@ work:
     city: "Remote"
     description:
       - >
-        Built backend services with a strong emphasis on testability,
-        maintainability, and delivery speed.
+        Built backend services with an emphasis on testability, maintainability,
+        and getting changes safely into production.
       - >
-        Automated the continuous delivery pipeline and simplified dependency
-        build processes to improve developer efficiency.
+        Automated the delivery pipeline and simplified dependency builds to make
+        day-to-day development less painful.
       - >
         Integrated platform components with multiple exchanges and blockchains,
         including Deribit, OKX, and Solana.
@@ -216,16 +214,16 @@ work:
         Managed 3 to 6 direct reports and supported team growth through
         coaching, pairing, and knowledge-sharing.
       - >
-        Partnered with product managers and stakeholders to define roadmap
-        priorities and align delivery with business goals.
+        Worked with product managers and stakeholders to turn roadmap needs
+        into delivery plans the team could actually execute.
       - >
         Led the transition from the first-generation conversation platform to
         the second generation without service disruption.
       - >
-        Maintained high engineering standards, including SSDLC compliance and
+        Kept engineering standards high, including SSDLC compliance and
         operational practices.
       - >
-        Balanced short-term delivery with long-term maintainability.
+        Balanced short-term delivery pressure with long-term maintainability.
     stack:
       - Python
       - Flask
