@@ -1,0 +1,7 @@
+.env
+.git
+.uv-cache
+node_modules
+dist
+latex/*.pdf
+latex/*.tex
