@@ -29,7 +29,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/dswistowski/cv-builder
+  IMAGE_NAME: ghcr.io/${{ github.repository }}/cv-builder
 
 jobs:
   publish:
