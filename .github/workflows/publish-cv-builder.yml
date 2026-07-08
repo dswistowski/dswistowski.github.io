@@ -1,0 +1,74 @@
+name: Publish CV Builder Image
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - .dockerignore
+      - .github/workflows/publish-cv-builder.yml
+      - Dockerfile
+      - build.py
+      - pyproject.toml
+      - templates/**
+      - tests/test_build.py
+      - uv.lock
+  pull_request:
+    paths:
+      - .dockerignore
+      - .github/workflows/publish-cv-builder.yml
+      - Dockerfile
+      - build.py
+      - pyproject.toml
+      - templates/**
+      - tests/test_build.py
+      - uv.lock
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE_NAME: ghcr.io/dswistowski/cv-builder
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install test dependencies
+        run: python -m pip install click==8.3.2 jinja2==3.1.6 pyyaml==6.0.3
+
+      - name: Run tests
+        run: python -m unittest tests.test_build
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Derive image tags
+        id: image-tags
+        run: echo "short_sha=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+
+      - name: Build and optionally publish image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: |
+            ${{ env.IMAGE_NAME }}:latest
+            ${{ env.IMAGE_NAME }}:${{ steps.image-tags.outputs.short_sha }}
