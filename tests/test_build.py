@@ -20,6 +20,7 @@ class LatexCommandTest(unittest.TestCase):
 name: Test User
 email: test@example.com
 phone: "+44 0000"
+location: London, UK
 github: https://github.com/example
 linkedin: https://linkedin.com/in/example
 about_me:
@@ -29,7 +30,14 @@ core_skills:
 technology:
   languages:
     - Python
-work: []
+work:
+  - date: 2025 - Present
+    page_break_before: true
+    title: Staff Engineer
+    where: Example
+    city: London
+    description: []
+    stack: []
 education: []
 publications: []
 talks: []
@@ -47,6 +55,8 @@ interests: []
             self.assertTrue(output_path.exists())
             rendered = output_path.read_text(encoding="utf-8")
             self.assertIn(r"\cvheader{Test User}", rendered)
+            self.assertIn("London, UK", rendered)
+            self.assertIn(r"\newpage", rendered)
             self.assertIn("Python", rendered)
 
 

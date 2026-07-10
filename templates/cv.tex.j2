@@ -42,7 +42,7 @@
 
 \cvheader{« name|tex_escape »}\par
 \vspace{0.35em}
-\contact{\href{mailto:« email »}{« email|tex_escape »} \textbar\ « phone|tex_escape » \textbar\ \href{« linkedin »}{LinkedIn} \textbar\ \href{« github »}{GitHub}}\par
+\contact{\href{mailto:« email »}{« email|tex_escape »} \textbar\ « phone|tex_escape »«« if location »» \textbar\ « location|tex_escape »«« endif »» \textbar\ \href{« linkedin »}{LinkedIn} \textbar\ \href{« github »}{GitHub}}\par
 
 \vspace{0.9em}
 «« for item in about_me »»
@@ -63,6 +63,9 @@
 
 \section*{Professional Experience}
 «« for item in work »»
+«« if item.page_break_before »»
+\newpage
+«« endif »»
 \roleheading{« item.title|tex_escape »}{« item.where|tex_escape », « item.city|tex_escape »}{« item.date|tex_escape »}
 \begin{itemize}
 «« for desc in item.description »»
